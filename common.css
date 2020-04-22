@@ -1,0 +1,8 @@
+blockquote {
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #efefef;
+    color: #555;
+}
