@@ -1,18 +1,90 @@
+header {
+    margin: 50px 0px;
+    font-size: 30px;
+    font-style: italic;
+    text-shadow: 0px 4px 20px rgba(0,0,0,0.40);
+    line-height: 1.2em;
+    animation-name: fadein;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes fadein {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
 blockquote {
     position: relative;
     padding: 15px;
     box-sizing: border-box;
     font-style: italic;
     background: #efefef;
-    color: #555;
+    color: #555;    
 }
 
-.contact {
-	display: inline-block;
-	font-size: 20px;
-	text-decoration:none;
-	padding: 24px 40px;
-	color: white;
-	background-color: black;
-	border-radius: 48px;
+.media {
+    margin: 50px auto;
+}
+
+.youtube {
+    background-color: red;
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
+
+.twitter {
+    background-color: deepskyblue;
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
+
+.github {
+    background-color: black;
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
+}
+
+.project {
+    background-color: blue;
+    display: inline;
+    position: relative;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 14px 80px;
 }
