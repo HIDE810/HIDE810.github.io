@@ -1,9 +1,9 @@
 header {
-    margin: 50px 0px;
+    margin: 50px auto;
     font-size: 30px;
     font-style: italic;
     text-shadow: 0px 4px 20px rgba(0,0,0,0.40);
-    line-height: 1.2em;
+    line-height: 2.0em;
     animation-name: fadein;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -30,7 +30,8 @@ blockquote {
 }
 
 .media {
-    margin: 50px auto;
+    margin: 20px auto;
+    line-height: 4.0em;
 }
 
 .youtube {
@@ -44,7 +45,7 @@ blockquote {
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
+    padding: 14px 74px;
 }
 
 .twitter {
