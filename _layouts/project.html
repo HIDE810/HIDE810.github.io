@@ -1,11 +1,11 @@
+---
+permalink: /project/
+---
+
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width">
-  <title>HIDE's Web</title>
-  <link rel="Icon" href="../Images/icon.png">
-  <link rel="stylesheet" href="../common.css">
+  {% include head.html %}
 </head>
 <body>
   <center>
@@ -13,7 +13,7 @@
     <hr>
     <a href="https://urutube.herokuapp.com/"><h2>UruTube</h2></a>
     <h3>Who is Uru?</h3>
-    <img src="../Images/Uru.jpg">
+    <img src="../assets/images/Uru.jpg">
     <blockquote>
       <p>Uru is a Japanese female singer-songwriter and signed to SMEJ. She keeps her personal information secret.</p>
       <cite><a href="https://en.wikipedia.org/wiki/Uru_(singer)">Wikipedia</a></cite>
@@ -30,17 +30,13 @@
     <iframe style="max-width:100%;" width="560" height="315" src="https://www.youtube.com/embed/k2KZoZZbtLw"></iframe>
     <hr>
     <a href="https://dailyverse.herokuapp.com/"><h2>DailyVerse</h2></a>
-    <img src="../Images/bible.jpg">
+    <img src="../assets/images/bible.jpg">
     <p>DailyVerse display a random bible verse per day. (To display them, it sometime takes a little time.)</p>
     <hr>
-    <button type="button" onclick="location.href='../index.html'"><=Back</button>
+    <button type="button" onclick="location.href='/'"><=Back</button>
     <hr>
     <footer>
-      <address>
-        <p>If you need anything, please send me <a href="mailto:HIDE810dev@gmail.com">an email</a>.</p>
-      </address>
-      Copyright © 2020 HIDE. All Rights Reserved. -
-      <a href="https://github.com/HIDE810/HIDE810.github.io">Source</a>
+      {% include footer.html %}
     </footer>
   </center>
 </body>
