@@ -29,13 +29,14 @@ blockquote {
     color: #555;    
 }
 
-.media {
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+.btn {
     margin: 20px auto;
     line-height: 4.0em;
 }
 
-.youtube {
-    background-color: red;
+.btn a {
     display: inline;
     position: relative;
     font-family: Arial;
@@ -45,47 +46,22 @@ blockquote {
     text-decoration: none;
     color: white;
     border-radius: 5px;
+    padding: 14px 80px;
+}
+
+.youtube {
+    background-color: red;
     padding: 14px 74px;
 }
 
 .twitter {
     background-color: deepskyblue;
-    display: inline;
-    position: relative;
-    font-family: Arial;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    padding: 14px 80px;
 }
 
 .github {
     background-color: black;
-    display: inline;
-    position: relative;
-    font-family: Arial;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    padding: 14px 80px;
 }
 
 .project {
     background-color: blue;
-    display: inline;
-    position: relative;
-    font-family: Arial;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: white;
-    border-radius: 5px;
-    padding: 14px 80px;
 }
