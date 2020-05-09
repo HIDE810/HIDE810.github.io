@@ -23,15 +23,6 @@ header {
   }
 }
 
-blockquote {
-    position: relative;
-    padding: 15px;
-    box-sizing: border-box;
-    font-style: italic;
-    background: #efefef;
-    color: #555;    
-}
-
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 .btn {
@@ -49,7 +40,6 @@ blockquote {
     text-decoration: none;
     color: white;
     border-radius: 5px;
-    padding: 14px 80px;
 }
 
 .youtube {
@@ -59,12 +49,10 @@ blockquote {
 
 .twitter {
     background-color: deepskyblue;
+    padding: 14px 80px;
 }
 
 .github {
     background-color: black;
-}
-
-.project {
-    background-color: blue;
+    padding: 14px 80px;
 }
