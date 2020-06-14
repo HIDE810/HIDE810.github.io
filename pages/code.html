@@ -1,0 +1,92 @@
+---
+layout: default
+permalink: code
+---
+
+<header>
+  <h1>Gateway Codes</h1>
+</header>
+<hr>
+<h4>
+<a href="/">HOME</a>&emsp;
+<a href="/project/">Project</a>
+</h4>
+<hr>
+<div class="code">
+    <h2>Flash code</h2>
+    [Flash]<br>
+    <code class="prettyprint">
+    DD000000 XXXXXXXX // Key code<br>
+    D5000000 01YYYYYY // Color code(BGR)<br>
+    D0000000 00000000 // end if<br>
+    F0F00000 00000018 // ASM 0x18
+    E59F000C // ldr r0, [pc, 0xC]<br>
+    E5961000 // ldr r1, [r6]<br>
+    E5801000 // str r1, [r0]<br>
+    E3A06000 // mov r6, #0<br>
+    E12FFF1E // bx lr<br>
+    90202204 // .word 0x90202204<br>
+    </code>
+    <br>
+    [Flash(SleepThread)]<br>
+    <code class="prettyprint">
+    DD000000 XXXXXXXX // Key code<br>
+    F0F00000 00000038 // ASM 0x38<br>
+    E92D4010 // push {r4, lr}<br>
+    E28F101C // add r1, pc, 0x1C<br>
+    E1C100D0 // ldrd r0, [r1]<br>
+    E59F301C // ldr r3, [pc, 0x1C]<br>
+    E59F401C // ldr r4, [pc, 0x1C]<br>
+    E5843000 // str r3, [r4]<br>
+    EF00000A // svc 0xA<br>
+    E3A03000 // mov r3, #0<br>
+    E5843000 // str r3, [r4]<br>
+    E8BD8010 // pop {r4, pc}<br>
+    YYYYYYYY // .word 0xYYYYYYYY<br>
+    YYYYYYYY // .word 0xYYYYYYYY // nanoseconds<br>
+    01ZZZZZZ // .word 0x01ZZZZZZ // Color code(BGR)<br>
+    90202000 // .word 0x90202204<br>
+    D0000000 00000000 // end if<br>
+    </code>
+    <br>
+    [Random Flash]<br>
+    <code class="prettyprint">
+    DD000000 XXXXXXXX // Key code<br>
+    FF000000 00FFFFFF // Random(0~0xFFFFFF)<br>
+    F7000000 01000000 // |=0x1000000<br>
+    D0000000 00000000 // end if<br>
+    F0F00000 00000030 // ASM 0x30<br>
+    E92D4010 // push {r4, lr}<br>
+    E28F1018 // add r1, pc, 0x18<br>
+    E1C100D0 // ldrd r0, [r1]<br>
+    E5963000 // ldr r3, [r6]<br>
+    E59F4014 // ldr r4, [pc, 0x14]<br>
+    E5843000 // str r3, [r4]<br>
+    EF00000A // svc 0xA<br>
+    E3A06000 // mov r6, #0<br>
+    E8BD8010 // pop {r4, pc}<br>
+    YYYYYYYY // .word 0xYYYYYYYY<br>
+    YYYYYYYY // .word 0xYYYYYYYY // nanoseconds<br>
+    90202204 // .word 0x90202204<br>
+    </code>
+    <h2>PublishToSubscriber</h2>
+    [PublishToSubscriber]<br>
+    <code class="prettyprint">
+    F0F00000 0000003C // ASM 0x3C<br>
+    E3A01000 // mov r1, #0<br>
+    E59F002C // ldr r0, [pc, 0x2C]<br>
+    E92D4010 // push {r4, lr}<br>
+    EE1D4F70 // mrc 15, 0, r4, crl3, cr0, {3}<br>
+    E59F3018 // ldr r3, [pc, 0x18]<br>
+    E1C408F4 // strd r0, [r4, #132]<br>
+    E5843080 // str r3, [r4, #128]<br>
+    E59F0010 // ldr r0, [pc, 0x10]<br>
+    EF000032 // svc 0x32<br>
+    E3500000 // cmp r0, #0<br>
+    A5940084 // ldrge r0, [r4, 0x84]<br>
+    E8BD8010 // pop {r4, pc}<br>
+    000C0080 // .word 0x000C0080<br>
+    00020003 // .word 0x00020003<br>
+    00000XXX // .word 0x00000XXX // <a href="https://www.3dbrew.org/wiki/Services#Notifications">Notifications ID</a><br>
+    </code>
+</div>
