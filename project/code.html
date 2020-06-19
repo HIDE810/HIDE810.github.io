@@ -81,11 +81,10 @@ layout: default
     <h2>PublishToSubscriber</h2>
     [PublishToSubscriber]<br>
     <code class="prettyprint">
-    F0F00000 0000003C // ASM 0x38<br>
-    E3A01000 // mov r1, #0<br>
+    F0F00000 0000003C // ASM 0x34<br>
     E59F0028 // ldr r0, [pc, 0x28]<br>
     E92D4010 // push {r4, lr}<br>
-    EE1D4F70 // mrc 15, 0, r4, crl3, cr0, {3}<br>
+    EE1D4F70 // mrc 15, 0, r4, cr13, cr0, {3}<br>
     E59F3014 // ldr r3, [pc, 0x14]<br>
     E1C408F4 // strd r0, [r4, #132]<br>
     E5843080 // str r3, [r4, #128]<br>
