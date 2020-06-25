@@ -23,6 +23,22 @@ header {
   }
 }
 
+blockquote {
+    text-align: left;
+    display: inline-block;
+    position: relative;
+    padding: 15px;
+    box-sizing: border-box;
+    font-style: italic;
+    background: #efefef;
+    color: #555;
+}
+
+ul li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
 /* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
 
 .btn {
