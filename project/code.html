@@ -18,7 +18,7 @@ layout: default
     DD000000 XXXXXXXX // Key code<br>
     D5000000 01YYYYYY // Color code(BGR)<br>
     D0000000 00000000 // end if<br>
-    F0F00000 00000018 // ASM 0x18
+    F0F00000 00000018 // ASM 0x18<br>
     E59F000C // ldr r0, [pc, 0xC]<br>
     E5961000 // ldr r1, [r6]<br>
     E5801000 // str r1, [r0]<br>
@@ -71,7 +71,7 @@ layout: default
     <br>
     [Backlight]<br>
     <code class="prettyprint">
-    F0F00000 00000018 // ASM 0x14
+    F0F00000 00000018 // ASM 0x14<br>
     E59F0008 // ldr r0, [pc, 0x8]<br>
     E3A010XX // mov r6, 0xXX // Screen brightness<br>
     E5801000 // str r1, [r0]<br>
