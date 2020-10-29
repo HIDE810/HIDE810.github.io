@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header>
-  <h1>ARM & HEX</h1>
+  <h1>ARM instruction set</h1>
 </header>
 <hr>
 <h4>
@@ -12,36 +12,23 @@ layout: default
 </h4>
 <hr>
 <div class="code">
-    <code class="prettyprint">
-    E1A0X00Y // mov rX, rY<br>
-    E3A0X0YY // mov rX, 0xYY<br>
-    <br>
-    E1E0X00Y // mvn rX, rY<br>
-    E3E0X0YY // mvn rX, 0xYY<br>
-    <br>
-    E15X000Y // cmp rX, rY<br>
-    E17X000Y // cmn rX, rY<br>
-    <br>
-    E5DYX000 // ldrb rX, [rY]<br>
-    E1DYX0D0 // ldrsb rX,[rY]<br>
-    E1DYX0B0 // ldrh rX, [rY]<br>
-    E1DYX0F0 // ldrsh rX, [rY]<br>
-    E59YX000 // ldr rX, [rY]<br>
-    E1CYX0D0 // ldrd rX, [rY]<br>
-    <br>
-    E5CYX000 // strb rX, [rY]<br>
-    E1CYX0B0 // strh rX, [rY]<br>
-    E58YX000 // str rX, [rY]<br>
-    E1CYX0F0 // strd rX, [rY]<br>
-    <br>
-    E08YX00Z // add rX, rY, rZ<br>
-    E04YX00Z // sub rX, rY, rZ<br>
-    E00X0Z9Y // mul rX, rY, rZ<br>
-    <br>
-    EF0000XX // svc 0xXX<br>
-    <br>
-    E12FFF1E // bx lr<br>
-    <br>
-    E320F000 // nop<br>
-    </code>
+<script>hljs.initHighlightingOnLoad();</script>
+<pre><code>
+add     @2つの値の加算
+and     @2つの値のビット単位の論理積
+b       @分岐
+bl      @リンク付き分岐
+blx     @リンク付き分岐と命令セット交換
+bx      @分岐と命令セット交換
+cmn     @2つの値の否定比較
+cmp     @2つの値の比較
+eor     @2つの値の排他的論理和
+ldr     @アドレスから値をロード
+mov     @値をレジスタにコピー
+mul     @2つの値の乗算
+mvn     @値の論理否定をレジスタにコピー
+orr     @2つの値のビット単位の論理和
+str     @値をアドレスに格納
+sub     @2つの値の減算
+</code></pre>
 </div>
