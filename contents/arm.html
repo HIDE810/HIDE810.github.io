@@ -3,7 +3,7 @@ layout: default
 ---
 
 <header>
-  <h1>ARM instruction set</h1>
+  <h1>ARM architecture</h1>
 </header>
 <hr>
 <h4>
@@ -11,24 +11,17 @@ layout: default
   <a href="/contents">Contents</a>
 </h4>
 <hr>
-<div class="code">
-  <script>hljs.initHighlightingOnLoad();</script>
-  <pre><code>
-add     @2つの値の加算
-and     @2つの値のビット単位の論理積
-b       @分岐
-bl      @リンク付き分岐
-blx     @リンク付き分岐と命令セット交換
-bx      @分岐と命令セット交換
-cmn     @2つの値の否定比較
-cmp     @2つの値の比較
-eor     @2つの値の排他的論理和
-ldr     @アドレスから値をロード
-mov     @値をレジスタにコピー
-mul     @2つの値の乗算
-mvn     @値の論理否定をレジスタにコピー
-orr     @2つの値のビット単位の論理和
-str     @値をアドレスに格納
-sub     @2つの値の減算
-  </code></pre>
+<div class="describe">
+  <p>
+    ARM processors are commonly found in mobile phones and tablets.<br>
+    They have become indispensable in the embedded processor.
+  </p>
+</div>
+<div class="describe">
+  <h3>Condition codes</h3>
+  <img src="../assets/img/cond.png" title="Condition codes" max>
+</div>
+<div class="describe">
+  <h3>Condition flags</h3>
+  <img src="../assets/img/flag.png" title="Condition flags">
 </div>

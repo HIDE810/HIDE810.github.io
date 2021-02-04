@@ -37,6 +37,11 @@ blockquote p {
     display: inline-block;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 ul li {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -47,4 +52,8 @@ ul li {
 .code {
     text-align: left;
     display: inline-block;
+}
+
+.describe {
+    margin: 30px 0;
 }
